@@ -11,24 +11,50 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 
-<body>
+<body style="height: 100%;">
   <div id="app"></div>
-  <div style="width: 100%;padding:20px 0;position: absolute;left: 0;bottom: 0;text-align: center;">
-    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002004148"
-      style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-      <img src="./icons/ban.png" style="float:left;" />
-      <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
-        川公网安备 51019002004148号
-      </p>
-    </a>
-  </div>
 
   <script>
     window.$docsify = {
       name: '',
       repo: '',
       loadSidebar: true,
-      search: 'auto'
+      search: 'auto',
+      plugins: [
+        function (hook, vm) {
+          var footer = [
+            '<footer id="footer">',
+            '<hr style="" />',
+            '<div style="padding-top: 40px;">',
+            '<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51019002004148" ',
+            'style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">',
+            '<img src="./icons/ban.png" style="float:left;"/>',
+            '<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">',
+            '川公网安备 51019002004148号</p>',
+            '</a>',
+            '</div>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function (html, next) {
+            next(html + footer);
+
+            // 重新设置footer
+            cluFooterPosition();
+          });
+        }
+      ]
+    }
+
+    function cluFooterPosition() {
+      // 文章高度
+      let ah = document.getElementById('main').clientHeight;
+      // body高度
+      let wh = document.body.clientHeight;
+      if (ah && ah < wh) {
+        let margin_top = wh - ah - 30;
+        document.getElementById('footer').style.marginTop = margin_top + 'px';
+      }
     }
   </script>
   <!-- Docsify v4 -->
