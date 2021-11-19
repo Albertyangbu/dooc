@@ -5,3 +5,5 @@
 * [docker常用命令](/1-commonly-tutorials/docker-useful)
 * [Maven上传jar到私服](/1-commonly-tutorials/maven-upload-jar)
 * [xxl-job-java模式代码](/1-commonly-tutorials/xxl-job-java-code)
+* [centos使用socat进行流量转发](/1-commonly-tutorials/centos-socat)
+
