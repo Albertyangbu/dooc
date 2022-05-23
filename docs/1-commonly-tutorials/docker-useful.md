@@ -10,7 +10,10 @@ docker 镜像下载
 docker save demo-gateway:1.0 > /Users/yangbo/Downloads/docker-images/demo-gateway-1.0.tar
 ```
 
-docker 删除tag未none的镜像
+docker 删除tag为none的镜像
 ```bash
+# docker自带命令
+docker image prune
+# 通过grep
 docker images|grep none|awk '{print $3}'|xargs docker rmi
 ```
