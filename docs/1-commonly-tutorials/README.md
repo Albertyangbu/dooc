@@ -9,3 +9,4 @@
 * [xxl-job-java模式代码](/1-commonly-tutorials/xxl-job-java-code)
 * [pip install 速度慢](/1-commonly-tutorials/pip-install-slow)
 * [mysql8.0.22安装](/1-commonly-tutorials/mysql8.0.22install)
+* [mac安装zsh并配置插件](/1-commonly-tutorials/install-zsh-and-plugins)
