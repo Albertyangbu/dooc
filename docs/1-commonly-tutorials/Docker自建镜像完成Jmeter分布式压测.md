@@ -17,9 +17,9 @@ cd jmeter-docker-tmp
 
 打开压缩包，修改`/bin/jmeter.properties`中如下配置
 
-```shell
+```properties
 # master地址
-remote_hosts=ip:port
+remote_hosts=ip:port(比如 192.168.10.123:1099)
 
 # 关闭ssl
 server.rmi.ssl.disable=true
@@ -90,12 +90,11 @@ docker logs js1 --tail 10
 
 打印如下内容表示成功
 
-```shell
+```text
 Jun 25, 2024 9:12:53 AM java.util.prefs.FileSystemPreferences$1 run
 INFO: Created user preferences directory.
 Using local port: 10991
 Created remote object: UnicastServerRef2 [liveRef: [endpoint:[127.0.0.1:10991](local),objID:[xxxx]]]
-S
 ```
 
 #### 主机配置
@@ -104,7 +103,7 @@ S
 
 打开主机使用的Jmeter，在`/bin/jmeter.properties`中修改如下配置
 
-```shell
+```properties
 # 修改为slave地址，请注意，此次地址必须和slave容器中打印的endpoint一致，且需要主机能访问到该地址
 remote_hosts=127.0.0.1:10991,127.0.0.2:10992
 
@@ -123,7 +122,7 @@ server.rmi.ssl.disable=true
 
 在slave容器中可看到如下日志
 
-```shell
+```text
 Starting the test on host 127.0.0.1:10991 @ June 26, 2024 9:16:54 AM CST (xxxx)
 Finished the test on host 127.0.0.1:10991 @ June 26, 2024 9:17:55 AM CST (xxxx)
 ```
