@@ -11,3 +11,7 @@
 * [mysql8.0.22安装](/1-commonly-tutorials/mysql8.0.22install)
 * [mac安装zsh并配置插件](/1-commonly-tutorials/install-zsh-and-plugins)
 * [Docker自建镜像完成Jmeter分布式压测](/1-commonly-tutorials/Docker自建镜像完成Jmeter分布式压测)
+* [Centos7部署docker和docker-compose](/1-commonly-tutorials/Centos7部署docker和docker-compose)
+* [docker安装mysql8](/1-commonly-tutorials/docker安装mysql8)
+* [docker安装redis](/1-commonly-tutorials/docker安装redis)
+* [docker安装blossom](/1-commonly-tutorials/docker安装blossom)
