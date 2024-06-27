@@ -15,7 +15,7 @@ mkdir -p /usr/local/docker/redis/data
 
 从源码获取配置文件，并放入`/usr/local/docker/redis/conf`
 
-[配置文件示例](/1-commonly-tutorials/redis-example.conf)
+[配置文件示例](/1-commonly-tutorials/redis-example)
 
 在配置文件中找到`requirepass`设置密码
 
