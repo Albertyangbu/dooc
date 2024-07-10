@@ -15,3 +15,4 @@
 * [docker安装mysql8](/1-commonly-tutorials/docker安装mysql8)
 * [docker安装redis](/1-commonly-tutorials/docker安装redis)
 * [docker安装blossom](/1-commonly-tutorials/docker安装blossom)
+* [docker构建前后端分离项目到一个镜像](/1-commonly-tutorials/docker构建前后端分离项目到一个镜像)
